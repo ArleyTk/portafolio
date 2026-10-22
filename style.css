@@ -1,0 +1,10 @@
+.point1,
+.point2,
+.point3 {
+    display: block;
+    text-align: center;
+    margin: 100px;
+    margin-top: 100px;
+    padding: 50px;
+    
+}
