@@ -1,10 +1,134 @@
-.point1,
-.point2,
-.point3 {
-    display: block;
-    text-align: center;
-    margin: 100px;
-    margin-top: 100px;
-    padding: 50px;
-    
+/* Personalización sobre Bootstrap */
+
+:root {
+    --acento: #0dcaf0;
+    --oscuro: #0f172a;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* compensa la navbar fija */
+}
+
+body {
+    background-color: #f4f6fa;
+    padding-top: 56px;
+}
+
+/* Hero */
+.hero {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #0e7490 100%);
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--oscuro);
+    background: var(--acento);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.15);
+}
+
+/* Secciones */
+.seccion {
+    margin-bottom: 4rem;
+}
+
+.titulo-seccion {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.titulo-seccion::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--acento);
+}
+
+.borde-acento {
+    border-left: 5px solid var(--acento) !important;
+}
+
+/* Tarjetas de proyectos */
+.tarjeta {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.15) !important;
+}
+
+.icono-proyecto {
+    font-size: 2.2rem;
+    color: #0e7490;
+}
+
+/* Categorías de proyectos */
+.categoria {
+    margin-bottom: 3rem;
+}
+
+.categoria:last-child {
+    margin-bottom: 0;
+}
+
+.titulo-categoria {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #dde3ee;
+}
+
+.icono-categoria {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #fff;
+    background: linear-gradient(135deg, #1e3a8a, #0e7490);
+}
+
+/* Tarjeta de reserva (reseñas pendientes) */
+.tarjeta-reserva {
+    background: transparent;
+    border: 2px dashed #b6c0d3;
+}
+
+.tarjeta-reserva:hover {
+    transform: none;
+    box-shadow: none !important;
+}
+
+.tarjeta-reserva .icono-proyecto {
+    color: #94a3b8;
+}
+
+/* Navbar */
+.navbar .nav-link {
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--acento);
 }
